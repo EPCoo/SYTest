@@ -17,7 +17,6 @@ class ViewController: NSViewController,NSTextFieldDelegate,NSTextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.cidTextField.delegate = self
         self.Q3TextView.delegate = self
         self.popUpOneBtn.addItemsWithTitles(["很简单","比较简单","一般般","比较难","很难"])
