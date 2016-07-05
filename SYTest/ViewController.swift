@@ -71,8 +71,8 @@ class ViewController: NSViewController,NSTextFieldDelegate,NSTextViewDelegate {
         let q2 = "2#" + String(self.popUpTwoBtn.indexOfSelectedItem + 6)
         let dic = ["question1":q1, "question2":q2, "desc3":"", "flag":"login"]
         
-        
-        let url = "http://121.42.205.189/index.php?cid=" + self.cidTextField.stringValue
+        let baseUrl = ""
+        let url = baseUrl + "/index.php?cid=" + self.cidTextField.stringValue
         let header = ["User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36"]
         Alamofire.request(.POST, url, parameters: dic, encoding: .URL, headers: header).responseJSON { (response) in
             let string = String.init(data: response.data!, encoding: NSUTF8StringEncoding)
